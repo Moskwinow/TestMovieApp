@@ -13,7 +13,6 @@ class BrandCell: UITableViewCell {
     private lazy var movieImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
-        imageView.image = UIImage(named: "movie")
         return imageView
     }()
     
@@ -21,7 +20,6 @@ class BrandCell: UITableViewCell {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
         label.textColor = .black
-        label.text = "fgdshjgfhjds"
         return label
     }()
     
@@ -30,7 +28,6 @@ class BrandCell: UITableViewCell {
         label.font = UIFont.systemFont(ofSize: 13, weight: .regular)
         label.numberOfLines = 2
         label.textColor = .black
-        label.text = "fgdshjgfhjds"
         return label
     }()
     
@@ -38,7 +35,6 @@ class BrandCell: UITableViewCell {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         label.textColor = .lightGray
-        label.text = "fgdshjgfhjds"
         return label
     }()
 

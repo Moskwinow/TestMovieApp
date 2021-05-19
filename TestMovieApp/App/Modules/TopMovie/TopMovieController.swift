@@ -21,9 +21,9 @@ class TopMovieController: UIViewController {
     
     private lazy var tableView: BrandTableView = {
         let table = BrandTableView(frame: .zero, style: .plain)
-        table.showsVerticalScrollIndicator = false
-        table.showsHorizontalScrollIndicator = false
-        table.tableFooterView = .init(frame: .zero)
+        table.dataSource = self
+        table.delegate = self
+        table.registerCellClass(BrandCell.self)
         return table
     }()
     
@@ -42,8 +42,6 @@ class TopMovieController: UIViewController {
         super.viewDidLoad()
         navigationItem.searchController = searchController
         view.addSubviews(tableView)
-        tableView.dataSource = self
-        tableView.delegate = self
         presenter.loadData(with: .movie)
     }
     
@@ -52,6 +50,13 @@ class TopMovieController: UIViewController {
         tableView.snp.makeConstraints {
             $0.size.equalToSuperview()
         }
+    }
+    
+    private func performToDetail(type: MovieType, id: Int) {
+        let presenter = DetailPresenter(networkService: NetworkServiceManager(), id: id, type: type)
+        let presentingView = DetailController(presenter: presenter)
+        presenter.output = presentingView
+        self.navigationController?.pushViewController(presentingView, animated: true)
     }
 }
 
@@ -74,6 +79,14 @@ extension TopMovieController: UITableViewDelegate, UITableViewDataSource {
             cell.configurate(with: presenter.model[indexPath.row])
         }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if presenter.isFiltering {
+            performToDetail(type: .movie, id: presenter.filteringModel[indexPath.row].id)
+        } else {
+            performToDetail(type: .movie, id: presenter.model[indexPath.row].id)
+        }
     }
 }
 

@@ -11,7 +11,9 @@ class BrandTableView: UITableView {
 
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
-        self.registerCellClass(BrandCell.self)
+        showsVerticalScrollIndicator = false
+        showsHorizontalScrollIndicator = false
+        tableFooterView = .init(frame: .zero)
         rowHeight = UITableView.automaticDimension
     }
     

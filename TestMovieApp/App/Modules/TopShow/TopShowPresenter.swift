@@ -60,4 +60,5 @@ final class TopShowPresenter: TopShowPresenterInput {
             return (model.name?.lowercased().contains(searchText.lowercased()) ?? false)
         })
     }
+
 }
