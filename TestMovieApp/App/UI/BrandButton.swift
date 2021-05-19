@@ -13,7 +13,7 @@ final class BrandButton: UIButton {
         didSet {
             if isEnabled {
                 setTitleColor(.white, for: .normal)
-                backgroundColor = UIColor.green.withAlphaComponent(0.5)
+                backgroundColor = UIColor.blue.withAlphaComponent(0.5)
             } else {
                 setTitleColor(.white, for: .normal)
                 backgroundColor = .clear

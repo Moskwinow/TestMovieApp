@@ -15,6 +15,7 @@ protocol LoginPresenterInput {
 protocol LoginPresenterOutput: class {
     func validateFields()
     func errorMessage(message: String)
+    func performToTabBar()
 }
 
 final class LoginPresenter: LoginPresenterInput {
@@ -39,8 +40,11 @@ final class LoginPresenter: LoginPresenterInput {
     func auth(_ method: AuthMethod, with email: String, and password: String) {
         authService.auth(method, with: email, and: password) { [weak self] (result) in
             switch result {
-            case .success:
-                self?.output?.errorMessage(message: "")
+            case .success(let message):
+                self?.output?.errorMessage(message: message)
+                if method == .signIn {
+                    self?.output?.performToTabBar()
+                }
             case .failure(let error):
                 self?.output?.errorMessage(message: error.localizedDescription)
             }

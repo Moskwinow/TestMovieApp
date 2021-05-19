@@ -7,23 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		358108924D6E0C6831F80154 /* Pods_TestMovieApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 676AEFB0C35A8D5D202EE67D /* Pods_TestMovieApp.framework */; };
 		D4C43DE12653C18D0020DB23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C43DE02653C18D0020DB23 /* AppDelegate.swift */; };
 		D4C43DE32653C18D0020DB23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C43DE22653C18D0020DB23 /* SceneDelegate.swift */; };
 		D4C43DE52653C18D0020DB23 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C43DE42653C18D0020DB23 /* LoginController.swift */; };
 		D4C43DEA2653C18F0020DB23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4C43DE92653C18F0020DB23 /* Assets.xcassets */; };
 		D4C43DED2653C18F0020DB23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4C43DEB2653C18F0020DB23 /* LaunchScreen.storyboard */; };
 		D4C43DF72653C3400020DB23 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4C43DF62653C3400020DB23 /* GoogleService-Info.plist */; };
-		D4C43DFD2653C4D70020DB23 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D4C43DFC2653C4D70020DB23 /* FirebaseAuth */; };
-		D4C43DFF2653C4D70020DB23 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D4C43DFE2653C4D70020DB23 /* FirebaseFirestore */; };
-		D4C43E032653C70F0020DB23 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D4C43E022653C70F0020DB23 /* SnapKit */; };
+		D4C43DFD2653C4D70020DB23 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = D4C43DFC2653C4D70020DB23 /* SwiftPackageProductDependency */; };
+		D4C43DFF2653C4D70020DB23 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = D4C43DFE2653C4D70020DB23 /* SwiftPackageProductDependency */; };
+		D4C43E032653C70F0020DB23 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = D4C43E022653C70F0020DB23 /* SwiftPackageProductDependency */; };
 		D4C43E072653D6C70020DB23 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C43E062653D6C70020DB23 /* LoginPresenter.swift */; };
 		D4C43E112653E0410020DB23 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C43E102653E0410020DB23 /* UIView+Ext.swift */; };
 		D4C43E152653E33D0020DB23 /* BrandTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C43E142653E33D0020DB23 /* BrandTextField.swift */; };
 		D4C43E192653E5FA0020DB23 /* BrandButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C43E182653E5FA0020DB23 /* BrandButton.swift */; };
 		D4C43E1D2653FF040020DB23 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C43E1C2653FF020020DB23 /* AuthService.swift */; };
+		D4C43E2326552AC40020DB23 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C43E2226552AC30020DB23 /* TabBarController.swift */; };
+		D4C43E2826552B2B0020DB23 /* TopMovieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C43E2726552B2B0020DB23 /* TopMovieController.swift */; };
+		D4C43E2C26552B4A0020DB23 /* TopMoviePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C43E2B26552B4A0020DB23 /* TopMoviePresenter.swift */; };
+		D4C43E2F265531960020DB23 /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C43E2E265531960020DB23 /* UITableView+Ext.swift */; };
+		D4C43E32265531F20020DB23 /* BrandTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C43E31265531F20020DB23 /* BrandTableView.swift */; };
+		D4C43E35265532380020DB23 /* BrandCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C43E34265532380020DB23 /* BrandCell.swift */; };
+		D4C43E3B265548750020DB23 /* TypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C43E3A265548750020DB23 /* TypeModel.swift */; };
+		D4C43E3F2655492E0020DB23 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C43E3E2655492E0020DB23 /* Model.swift */; };
+		D4C43E4326554E900020DB23 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = D4C43E4226554E900020DB23 /* SwiftPackageProductDependency */; };
+		D4C43E4626554F800020DB23 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C43E4526554F800020DB23 /* NetworkService.swift */; };
+		D4C43E4A26555FBA0020DB23 /* TopShowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C43E4926555FBA0020DB23 /* TopShowController.swift */; };
+		D4C43E4F265561860020DB23 /* TopShowPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C43E4E265561860020DB23 /* TopShowPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00F32CD6B587305E50AC8771 /* Pods-TestMovieApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestMovieApp.debug.xcconfig"; path = "Target Support Files/Pods-TestMovieApp/Pods-TestMovieApp.debug.xcconfig"; sourceTree = "<group>"; };
+		676AEFB0C35A8D5D202EE67D /* Pods_TestMovieApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestMovieApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94108F7F1F03327C3AAB7D3C /* Pods-TestMovieApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestMovieApp.release.xcconfig"; path = "Target Support Files/Pods-TestMovieApp/Pods-TestMovieApp.release.xcconfig"; sourceTree = "<group>"; };
 		D4C43DDD2653C18D0020DB23 /* TestMovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestMovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C43DE02653C18D0020DB23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4C43DE22653C18D0020DB23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +53,17 @@
 		D4C43E142653E33D0020DB23 /* BrandTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandTextField.swift; sourceTree = "<group>"; };
 		D4C43E182653E5FA0020DB23 /* BrandButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandButton.swift; sourceTree = "<group>"; };
 		D4C43E1C2653FF020020DB23 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		D4C43E2226552AC30020DB23 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		D4C43E2726552B2B0020DB23 /* TopMovieController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMovieController.swift; sourceTree = "<group>"; };
+		D4C43E2B26552B4A0020DB23 /* TopMoviePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviePresenter.swift; sourceTree = "<group>"; };
+		D4C43E2E265531960020DB23 /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
+		D4C43E31265531F20020DB23 /* BrandTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandTableView.swift; sourceTree = "<group>"; };
+		D4C43E34265532380020DB23 /* BrandCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandCell.swift; sourceTree = "<group>"; };
+		D4C43E3A265548750020DB23 /* TypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeModel.swift; sourceTree = "<group>"; };
+		D4C43E3E2655492E0020DB23 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		D4C43E4526554F800020DB23 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		D4C43E4926555FBA0020DB23 /* TopShowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopShowController.swift; sourceTree = "<group>"; };
+		D4C43E4E265561860020DB23 /* TopShowPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopShowPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,20 +71,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4C43E032653C70F0020DB23 /* SnapKit in Frameworks */,
-				D4C43DFD2653C4D70020DB23 /* FirebaseAuth in Frameworks */,
-				D4C43DFF2653C4D70020DB23 /* FirebaseFirestore in Frameworks */,
+				D4C43E4326554E900020DB23 /* BuildFile in Frameworks */,
+				D4C43E032653C70F0020DB23 /* BuildFile in Frameworks */,
+				D4C43DFD2653C4D70020DB23 /* BuildFile in Frameworks */,
+				D4C43DFF2653C4D70020DB23 /* BuildFile in Frameworks */,
+				358108924D6E0C6831F80154 /* Pods_TestMovieApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		79E6354F2476659D17A112E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				676AEFB0C35A8D5D202EE67D /* Pods_TestMovieApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D4C43DD42653C18D0020DB23 = {
 			isa = PBXGroup;
 			children = (
 				D4C43DDF2653C18D0020DB23 /* TestMovieApp */,
 				D4C43DDE2653C18D0020DB23 /* Products */,
+				F3FA8475BE56E426A117CF5E /* Pods */,
+				79E6354F2476659D17A112E4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +133,7 @@
 		D4C43E092653DFC50020DB23 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				D4C43E392655485B0020DB23 /* Models */,
 				D4C43E1B2653FEE80020DB23 /* Services */,
 				D4C43E132653E3240020DB23 /* UI */,
 				D4C43E0E2653E01F0020DB23 /* Extensions */,
@@ -105,6 +145,9 @@
 		D4C43E0A2653DFD60020DB23 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				D4C43E2126552A8A0020DB23 /* TabBar */,
+				D4C43E4826555F810020DB23 /* TopShow */,
+				D4C43E2626552AE60020DB23 /* TopMovie */,
 				D4C43E0B2653E00F0020DB23 /* Login */,
 			);
 			path = Modules;
@@ -123,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				D4C43E102653E0410020DB23 /* UIView+Ext.swift */,
+				D4C43E2E265531960020DB23 /* UITableView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -132,6 +176,7 @@
 			children = (
 				D4C43E142653E33D0020DB23 /* BrandTextField.swift */,
 				D4C43E182653E5FA0020DB23 /* BrandButton.swift */,
+				D4C43E37265532400020DB23 /* TableView */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -140,8 +185,63 @@
 			isa = PBXGroup;
 			children = (
 				D4C43E1C2653FF020020DB23 /* AuthService.swift */,
+				D4C43E4526554F800020DB23 /* NetworkService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		D4C43E2126552A8A0020DB23 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				D4C43E2226552AC30020DB23 /* TabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		D4C43E2626552AE60020DB23 /* TopMovie */ = {
+			isa = PBXGroup;
+			children = (
+				D4C43E2726552B2B0020DB23 /* TopMovieController.swift */,
+				D4C43E2B26552B4A0020DB23 /* TopMoviePresenter.swift */,
+			);
+			path = TopMovie;
+			sourceTree = "<group>";
+		};
+		D4C43E37265532400020DB23 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				D4C43E31265531F20020DB23 /* BrandTableView.swift */,
+				D4C43E34265532380020DB23 /* BrandCell.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		D4C43E392655485B0020DB23 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D4C43E3A265548750020DB23 /* TypeModel.swift */,
+				D4C43E3E2655492E0020DB23 /* Model.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D4C43E4826555F810020DB23 /* TopShow */ = {
+			isa = PBXGroup;
+			children = (
+				D4C43E4926555FBA0020DB23 /* TopShowController.swift */,
+				D4C43E4E265561860020DB23 /* TopShowPresenter.swift */,
+			);
+			path = TopShow;
+			sourceTree = "<group>";
+		};
+		F3FA8475BE56E426A117CF5E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				00F32CD6B587305E50AC8771 /* Pods-TestMovieApp.debug.xcconfig */,
+				94108F7F1F03327C3AAB7D3C /* Pods-TestMovieApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,9 +251,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4C43DF12653C18F0020DB23 /* Build configuration list for PBXNativeTarget "TestMovieApp" */;
 			buildPhases = (
+				E9171D4388FA958E90CCA62A /* [CP] Check Pods Manifest.lock */,
 				D4C43DD92653C18D0020DB23 /* Sources */,
 				D4C43DDA2653C18D0020DB23 /* Frameworks */,
 				D4C43DDB2653C18D0020DB23 /* Resources */,
+				14CCD725D75F0506A17624DE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,9 +263,10 @@
 			);
 			name = TestMovieApp;
 			packageProductDependencies = (
-				D4C43DFC2653C4D70020DB23 /* FirebaseAuth */,
-				D4C43DFE2653C4D70020DB23 /* FirebaseFirestore */,
-				D4C43E022653C70F0020DB23 /* SnapKit */,
+				D4C43DFC2653C4D70020DB23 /* SwiftPackageProductDependency */,
+				D4C43DFE2653C4D70020DB23 /* SwiftPackageProductDependency */,
+				D4C43E022653C70F0020DB23 /* SwiftPackageProductDependency */,
+				D4C43E4226554E900020DB23 /* SwiftPackageProductDependency */,
 			);
 			productName = TestMovieApp;
 			productReference = D4C43DDD2653C18D0020DB23 /* TestMovieApp.app */;
@@ -193,8 +296,9 @@
 			);
 			mainGroup = D4C43DD42653C18D0020DB23;
 			packageReferences = (
-				D4C43DFB2653C4D70020DB23 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				D4C43E012653C70F0020DB23 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				D4C43DFB2653C4D70020DB23 /* RemoteSwiftPackageReference */,
+				D4C43E012653C70F0020DB23 /* RemoteSwiftPackageReference */,
+				D4C43E4126554E8F0020DB23 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = D4C43DDE2653C18D0020DB23 /* Products */;
 			projectDirPath = "";
@@ -218,17 +322,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		14CCD725D75F0506A17624DE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestMovieApp/Pods-TestMovieApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestMovieApp/Pods-TestMovieApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestMovieApp/Pods-TestMovieApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9171D4388FA958E90CCA62A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestMovieApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D4C43DD92653C18D0020DB23 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4C43E3B265548750020DB23 /* TypeModel.swift in Sources */,
 				D4C43E072653D6C70020DB23 /* LoginPresenter.swift in Sources */,
 				D4C43E152653E33D0020DB23 /* BrandTextField.swift in Sources */,
 				D4C43DE52653C18D0020DB23 /* LoginController.swift in Sources */,
+				D4C43E2326552AC40020DB23 /* TabBarController.swift in Sources */,
+				D4C43E4626554F800020DB23 /* NetworkService.swift in Sources */,
+				D4C43E4A26555FBA0020DB23 /* TopShowController.swift in Sources */,
 				D4C43E192653E5FA0020DB23 /* BrandButton.swift in Sources */,
+				D4C43E35265532380020DB23 /* BrandCell.swift in Sources */,
 				D4C43E112653E0410020DB23 /* UIView+Ext.swift in Sources */,
+				D4C43E2C26552B4A0020DB23 /* TopMoviePresenter.swift in Sources */,
+				D4C43E4F265561860020DB23 /* TopShowPresenter.swift in Sources */,
+				D4C43E2826552B2B0020DB23 /* TopMovieController.swift in Sources */,
+				D4C43E32265531F20020DB23 /* BrandTableView.swift in Sources */,
 				D4C43DE12653C18D0020DB23 /* AppDelegate.swift in Sources */,
+				D4C43E3F2655492E0020DB23 /* Model.swift in Sources */,
+				D4C43E2F265531960020DB23 /* UITableView+Ext.swift in Sources */,
 				D4C43DE32653C18D0020DB23 /* SceneDelegate.swift in Sources */,
 				D4C43E1D2653FF040020DB23 /* AuthService.swift in Sources */,
 			);
@@ -366,6 +523,7 @@
 		};
 		D4C43DF22653C18F0020DB23 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00F32CD6B587305E50AC8771 /* Pods-TestMovieApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -386,6 +544,7 @@
 		};
 		D4C43DF32653C18F0020DB23 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94108F7F1F03327C3AAB7D3C /* Pods-TestMovieApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -428,7 +587,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D4C43DFB2653C4D70020DB23 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		D4C43DFB2653C4D70020DB23 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
@@ -436,7 +595,7 @@
 				minimumVersion = 8.0.0;
 			};
 		};
-		D4C43E012653C70F0020DB23 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		D4C43E012653C70F0020DB23 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
@@ -444,23 +603,36 @@
 				minimumVersion = 5.0.1;
 			};
 		};
+		D4C43E4126554E8F0020DB23 /* RemoteSwiftPackageReference */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D4C43DFC2653C4D70020DB23 /* FirebaseAuth */ = {
+		D4C43DFC2653C4D70020DB23 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D4C43DFB2653C4D70020DB23 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = D4C43DFB2653C4D70020DB23 /* RemoteSwiftPackageReference */;
 			productName = FirebaseAuth;
 		};
-		D4C43DFE2653C4D70020DB23 /* FirebaseFirestore */ = {
+		D4C43DFE2653C4D70020DB23 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D4C43DFB2653C4D70020DB23 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = D4C43DFB2653C4D70020DB23 /* RemoteSwiftPackageReference */;
 			productName = FirebaseFirestore;
 		};
-		D4C43E022653C70F0020DB23 /* SnapKit */ = {
+		D4C43E022653C70F0020DB23 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D4C43E012653C70F0020DB23 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = D4C43E012653C70F0020DB23 /* RemoteSwiftPackageReference */;
 			productName = SnapKit;
+		};
+		D4C43E4226554E900020DB23 /* SwiftPackageProductDependency */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4C43E4126554E8F0020DB23 /* RemoteSwiftPackageReference */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

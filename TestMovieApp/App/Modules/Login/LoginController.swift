@@ -99,12 +99,12 @@ class LoginController: UIViewController {
         emailField.snp.makeConstraints {
             $0.center.centerY.equalToSuperview()
             $0.left.equalToSuperview().inset(10)
-            $0.right.equalToSuperview().inset(80)
+            $0.right.equalToSuperview().inset(10)
             $0.height.equalTo(40)
         }
         passwordField.snp.makeConstraints {
             $0.top.equalTo(emailField.snp.bottom).offset(10)
-            $0.left.equalToSuperview().inset(80)
+            $0.left.equalToSuperview().inset(10)
             $0.right.equalToSuperview().inset(10)
             $0.height.equalTo(40)
         }
@@ -121,9 +121,18 @@ class LoginController: UIViewController {
         }
         warningTextLabel.snp.makeConstraints {
             $0.top.equalTo(passwordField.snp.bottom).offset(10)
-            $0.left.equalToSuperview().inset(80)
+            $0.left.equalToSuperview().inset(10)
             $0.right.equalTo(loginButton.snp.left).offset(-10)
         }
+    }
+    
+    // MARK: -  Private functions
+    
+    private func performToTabBarController() {
+        let tabBar = TabBarController()
+        tabBar.modalPresentationStyle = .fullScreen
+        tabBar.modalTransitionStyle = .crossDissolve
+        present(tabBar, animated: true, completion: nil)
     }
     
     // MARK: -  Actions
@@ -148,6 +157,13 @@ class LoginController: UIViewController {
 }
 
 extension LoginController: LoginPresenterOutput {
+    
+    func performToTabBar() {
+        DispatchQueue.main.async {
+            self.performToTabBarController()
+        }
+    }
+    
     func validateFields() {
         loginButton.isEnabled = presenter.buttonIsEnable
         registerButton.isEnabled = presenter.buttonIsEnable

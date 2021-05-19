@@ -30,8 +30,7 @@ final class AuthServiceManager: AuthService {
     private func signUp(email: String, password: String, completion: @escaping (Result<String, Error>) -> ()) {
         Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
             if error == nil {
-                print(authResult?.user.email)
-                completion(.success(""))
+                completion(.success("User: \(email.uppercased()) successfully created now you can sign in "))
             } else {
                 completion(.failure(error!))
             }
@@ -41,7 +40,6 @@ final class AuthServiceManager: AuthService {
     private func signIn(email: String, password: String, completion: @escaping (Result<String, Error>) -> ()) {
         Auth.auth().signIn(withEmail: email, password: password) { (authResult, error) in
             if error == nil {
-                print(authResult?.user.email)
                 completion(.success(""))
             } else {
                 completion(.failure(error!))
