@@ -21,7 +21,6 @@ class DefaultServiceManager {
     }
     
     static func saveItem(model: [Model]) {
-        print(model)
         let jsonEndcoder = JSONEncoder()
         if let encoded = try? jsonEndcoder.encode(model) {
             UserDefaults.standard.setValue(encoded, forKey: key)

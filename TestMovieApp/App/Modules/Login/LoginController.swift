@@ -146,12 +146,10 @@ class LoginController: UIViewController {
     }
     
     @objc func signInAction() {
-        print("work")
         presenter.auth(.signIn, with: emailField.text ?? "", and: passwordField.text ?? "")
     }
     
     @objc func signUpAction() {
-        print("work")
         presenter.auth(.signUp, with: emailField.text ?? "", and: passwordField.text ?? "")
     }
 }

@@ -48,8 +48,6 @@ class TopMovieController: UIViewController {
         navigationItem.searchController = searchController
         view.addSubviews(tableView)
         presenter.loadData(with: .movie)
-        print(favourites.count)
-
     }
     
     override func viewDidLayoutSubviews() {

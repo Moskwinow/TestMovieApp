@@ -56,7 +56,6 @@ final class DetailPresenter: DetailPresenterInput {
     }
     
     private func loadReviews(type: MovieType) {
-        print(type.rawValue)
         networkService.loadReviews(type: type, with: id) { [weak self] (result) in
             switch result {
             case .success(let model):
