@@ -52,6 +52,11 @@ class TopShowController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.tabBar.isHidden = false
+    }
+    
     private func performToDetail(type: MovieType, id: Int) {
         let presenter = DetailPresenter(networkService: NetworkServiceManager(), id: id, type: type)
         let presentingView = DetailController(presenter: presenter)

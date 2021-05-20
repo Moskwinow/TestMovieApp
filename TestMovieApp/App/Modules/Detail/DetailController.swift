@@ -30,7 +30,6 @@ class DetailController: UIViewController {
         label.font = UIFont.systemFont(ofSize: 13, weight: .regular)
         label.numberOfLines = 2
         label.textColor = .black
-        label.text = "aghdshjdgsahjgdshjdas"
         return label
     }()
     
@@ -51,7 +50,9 @@ class DetailController: UIViewController {
     
     private lazy var tableView: BrandTableView = {
         let table = BrandTableView(frame: .zero, style: .plain)
-
+        table.delegate = self
+        table.dataSource = self
+        table.registerCellClass(DetailCell.self)
         return table
     }()
     
@@ -113,17 +114,27 @@ class DetailController: UIViewController {
             $0.left.right.bottom.equalToSuperview().inset(0)
         }
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.tabBar.isHidden = true
+    }
 }
 
 // MARK: -  Table view data source
 
 extension DetailController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return presenter.reviewModel.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell: DetailCell = tableView.dequeueReusableCell(for: indexPath)
+        cell.configurate(with: presenter.reviewModel[indexPath.row])
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Reviews"
     }
 }
 
@@ -135,7 +146,6 @@ extension DetailController: DetailPresenterOutput {
                 self.movieTitleTextLabel.text = self.presenter.model?.title
             } else {
                 self.movieTitleTextLabel.text = self.presenter.model?.name
-                
             }
             for genre in self.presenter.model?.genres ?? [] {
                 self.genresTextLabel.text = "\(genre.name) "
@@ -145,6 +155,11 @@ extension DetailController: DetailPresenterOutput {
             guard let imageURL = URL(string: "https://image.tmdb.org/t/p/w500/\(self.presenter.model?.image ?? "")") else {return}
             self.posterImageView.kf.indicatorType = .activity
             self.posterImageView.kf.setImage(with: imageURL)
+        }
+    }
+    func refresh() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
         }
     }
 }

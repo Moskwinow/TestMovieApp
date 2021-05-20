@@ -38,6 +38,8 @@
 		D4C43E6026558CF30020DB23 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C43E5F26558CF30020DB23 /* DetailPresenter.swift */; };
 		D4C43E6326558F900020DB23 /* DetailTypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C43E6226558F900020DB23 /* DetailTypeModel.swift */; };
 		D4C43E662655908C0020DB23 /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C43E652655908C0020DB23 /* DetailModel.swift */; };
+		D4C43E6B2655A55D0020DB23 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C43E6A2655A55C0020DB23 /* DetailCell.swift */; };
+		D4C43E6E2656242A0020DB23 /* ReviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C43E6D265624290020DB23 /* ReviewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +74,8 @@
 		D4C43E5F26558CF30020DB23 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		D4C43E6226558F900020DB23 /* DetailTypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTypeModel.swift; sourceTree = "<group>"; };
 		D4C43E652655908C0020DB23 /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
+		D4C43E6A2655A55C0020DB23 /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
+		D4C43E6D265624290020DB23 /* ReviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +225,7 @@
 			children = (
 				D4C43E31265531F20020DB23 /* BrandTableView.swift */,
 				D4C43E34265532380020DB23 /* BrandCell.swift */,
+				D4C43E6A2655A55C0020DB23 /* DetailCell.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -232,6 +237,7 @@
 				D4C43E3E2655492E0020DB23 /* Model.swift */,
 				D4C43E6226558F900020DB23 /* DetailTypeModel.swift */,
 				D4C43E652655908C0020DB23 /* DetailModel.swift */,
+				D4C43E6D265624290020DB23 /* ReviewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -393,6 +399,7 @@
 				D4C43E152653E33D0020DB23 /* BrandTextField.swift in Sources */,
 				D4C43DE52653C18D0020DB23 /* LoginController.swift in Sources */,
 				D4C43E662655908C0020DB23 /* DetailModel.swift in Sources */,
+				D4C43E6E2656242A0020DB23 /* ReviewModel.swift in Sources */,
 				D4C43E2326552AC40020DB23 /* TabBarController.swift in Sources */,
 				D4C43E6026558CF30020DB23 /* DetailPresenter.swift in Sources */,
 				D4C43E4626554F800020DB23 /* NetworkService.swift in Sources */,
@@ -402,6 +409,7 @@
 				D4C43E35265532380020DB23 /* BrandCell.swift in Sources */,
 				D4C43E112653E0410020DB23 /* UIView+Ext.swift in Sources */,
 				D4C43E2C26552B4A0020DB23 /* TopMoviePresenter.swift in Sources */,
+				D4C43E6B2655A55D0020DB23 /* DetailCell.swift in Sources */,
 				D4C43E4F265561860020DB23 /* TopShowPresenter.swift in Sources */,
 				D4C43E6326558F900020DB23 /* DetailTypeModel.swift in Sources */,
 				D4C43E2826552B2B0020DB23 /* TopMovieController.swift in Sources */,

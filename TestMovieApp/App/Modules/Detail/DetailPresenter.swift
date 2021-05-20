@@ -9,6 +9,7 @@ import Foundation
 
 protocol DetailPresenterInput {
     var model: DetailTypeModel? {get set}
+    var reviewModel: [ReviewContent] {get set}
     var id: Int {get set}
     var type: MovieType {get set}
     var output: DetailPresenterOutput? {get set}
@@ -17,12 +18,18 @@ protocol DetailPresenterInput {
 
 protocol DetailPresenterOutput: class {
     func updateView()
+    func refresh()
 }
 
 class DetailPresenter: DetailPresenterInput {
     var model: DetailTypeModel? {
         didSet {
             output?.updateView()
+        }
+    }
+    var reviewModel: [ReviewContent] = [] {
+        didSet {
+            output?.refresh()
         }
     }
     var id: Int
@@ -37,10 +44,23 @@ class DetailPresenter: DetailPresenterInput {
     }
     
     func loadDetailData() {
-        networkService.loadDetailData(type: type, with: id) { (result) in
+        networkService.loadDetailData(type: type, with: id) { [weak self] (result) in
             switch result {
             case .success(let model):
-                self.model = model
+                self?.model = model
+                self?.loadReviews(type: self!.type)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    private func loadReviews(type: MovieType) {
+        print(type.rawValue)
+        networkService.loadReviews(type: type, with: id) { [weak self] (result) in
+            switch result {
+            case .success(let model):
+                self?.reviewModel = model
             case .failure(let error):
                 print(error.localizedDescription)
             }
