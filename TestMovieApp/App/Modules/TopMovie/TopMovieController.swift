@@ -63,6 +63,7 @@ class TopMovieController: UIViewController {
         super.viewWillAppear(animated)
         tabBarController?.tabBar.isHidden = false
         favourites = DefaultServiceManager.fetchFavourites()
+        tableView.reloadData()
     }
     
     private func performToDetail(type: MovieType, id: Int) {
