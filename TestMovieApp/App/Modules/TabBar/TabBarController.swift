@@ -16,7 +16,11 @@ class TabBarController: UITabBarController {
     }
     
     private func configurateControllers() {
-        viewControllers = [makeTopMovieController(), makeTopShowController()]
+        viewControllers = [
+            makeTopMovieController(),
+            makeTopShowController(),
+            makeFavouriteController()
+        ]
     }
     
     private func makeTopMovieController() -> UINavigationController {
@@ -35,6 +39,15 @@ class TabBarController: UITabBarController {
         let navigation = UINavigationController(rootViewController: presentingView)
         navigation.tabBarItem = UITabBarItem(title: "Top Shows", image: nil, tag: 0)
         presentingView.navigationItem.title = "Top Today"
+        presenter.output = presentingView
+        return navigation
+    }
+    private func makeFavouriteController() -> UINavigationController {
+        let presenter = FavouritePresenter()
+        let presentingView = FavouriteController(presenter: presenter)
+        let navigation = UINavigationController(rootViewController: presentingView)
+        navigation.tabBarItem = UITabBarItem(title: "Favourites", image: nil, tag: 0)
+        presentingView.navigationItem.title = "Favourites"
         presenter.output = presentingView
         return navigation
     }

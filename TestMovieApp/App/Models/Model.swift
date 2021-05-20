@@ -12,21 +12,21 @@ struct ResponseModel: Decodable {
     var results: [Model]
 }
 
-struct Model: TypeModel, Codable {
+struct Model: TypeModel, Codable, Equatable {
     
-    var id: Int
+    var id: Int = 0
     
-    var title: String?
+    var title: String? = ""
     
-    var votes: Double
+    var votes: Double = 0.0
     
-    var overview: String
+    var overview: String = ""
     
-    var image: String
+    var image: String = ""
     
     var name: String?
     
-    var type: String
+    var type: String = ""
     
     private enum CodingKeys: String, CodingKey {
         case votes = "vote_average"

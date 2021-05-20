@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol TypeModel {
+protocol TypeModel: Codable {
     var id: Int {get set}
     var title: String? {get set}
     var votes: Double {get set}

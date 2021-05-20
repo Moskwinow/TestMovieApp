@@ -10,6 +10,11 @@ import UIKit
 class TopMovieController: UIViewController {
     
     var presenter: TopMoviePresenterInput
+    var favourites: [Model] = DefaultServiceManager.fetchFavourites() {
+        willSet {
+            DefaultServiceManager.saveItem(model: newValue)
+        }
+    }
     
     private lazy var searchController: UISearchController = {
         let searchController = UISearchController()
@@ -43,6 +48,8 @@ class TopMovieController: UIViewController {
         navigationItem.searchController = searchController
         view.addSubviews(tableView)
         presenter.loadData(with: .movie)
+        print(favourites.count)
+
     }
     
     override func viewDidLayoutSubviews() {
@@ -55,6 +62,7 @@ class TopMovieController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tabBarController?.tabBar.isHidden = false
+        favourites = DefaultServiceManager.fetchFavourites()
     }
     
     private func performToDetail(type: MovieType, id: Int) {
@@ -78,10 +86,30 @@ extension TopMovieController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: BrandCell = tableView.dequeueReusableCell(for: indexPath)
+        var model: [TypeModel] = []
         if presenter.isFiltering {
-            cell.configurate(with: presenter.filteringModel[indexPath.row])
+            model = presenter.filteringModel
         } else {
-            cell.configurate(with: presenter.model[indexPath.row])
+            model = presenter.model
+        }
+        cell.configurate(with: model[indexPath.row])
+        if favourites.contains(where: {$0.id == model[indexPath.row].id}) {
+            cell.fillHeart = true
+        } else {
+            cell.fillHeart = false
+        }
+        cell.heartIsSelected = { [ weak self] in
+            guard let self = self  else {return}
+            if !self.favourites.contains(where: {$0.id == model[indexPath.row].id}) {
+                self.favourites.append(model[indexPath.row] as! Model)
+                DefaultServiceManager.saveItem(model: self.favourites)
+                cell.fillHeart.toggle()
+            } else {
+                guard let index = self.favourites.firstIndex(where: {$0.id == model[indexPath.row].id}) else {return}
+                self.favourites.remove(at: index)
+                DefaultServiceManager.saveItem(model: self.favourites)
+                cell.fillHeart.toggle()
+            }
         }
         return cell
     }

@@ -21,7 +21,7 @@ protocol DetailPresenterOutput: class {
     func refresh()
 }
 
-class DetailPresenter: DetailPresenterInput {
+final class DetailPresenter: DetailPresenterInput {
     var model: DetailTypeModel? {
         didSet {
             output?.updateView()

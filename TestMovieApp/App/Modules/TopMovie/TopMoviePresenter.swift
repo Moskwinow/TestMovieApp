@@ -9,7 +9,7 @@ import Foundation
 
 protocol TopMoviePresenterInput {
     var output: TopMoviePresenterOutput? {get set}
-    var model: [TypeModel] {get set}
+    var model: [Model] {get set}
     var filteringModel: [TypeModel] {get set}
     var isFiltering: Bool {get set}
     func loadData(with type: MovieType)
@@ -24,7 +24,7 @@ final class TopMoviePresenter: TopMoviePresenterInput {
     
     weak var output: TopMoviePresenterOutput?
     
-    var model: [TypeModel] = [] {
+    var model: [Model] = [] {
         didSet {
             output?.refresh()
         }
@@ -48,7 +48,7 @@ final class TopMoviePresenter: TopMoviePresenterInput {
             case .success(let model):
                 self.model = model.sorted(by: { (l, r) -> Bool in
                     l.votes > r.votes
-                })
+                }) as! [Model]
             case .failure(let error):
                 print(error.localizedDescription)
             }
